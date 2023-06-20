@@ -1,0 +1,197 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/fotos.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <title>¿Por qué ayudar?</title>
+    <script src="js/metodos.js"></script>
+</head>
+</script>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                data-target="#opciones">
+            <span class="navbar-toggler-icon"></span>
+            </button>   
+
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'img/ala.png' %}" width="45px" height="45x">
+            </a>
+
+            <div class="collapse navbar-collapse" id="opciones"> 
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    </li>
+                        <a class="nav-link" href="{% url 'inicio' %}">Ayu-Dog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'misionvision' %}">Mision/vision</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'sobreperros' %}">Sobre perros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Iniciar sesion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'crear' %}">Crear</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav><!--cierre de menú-->
+    </header>
+    <div>
+        <div class="container">
+          <div class="row">
+              <div class="col-md">
+                  <div class="card">
+                      <h5 class="card-title">lulu en situacion de calle a la izquierda  / A la derecha lulu 4 meses despues de haber ingresado a nuestra fundacion</h1>
+                      <img src="{% static 'img/el-antes-y-despues-de-perros-vagabundos-rescatados-1.webp' %}" class="card-img-top" width="200" height="500">
+                  </div>
+              </div><!--cierre col-->
+            </div><!--fin row-->
+        </div>
+    </div>
+    <br>
+
+    <div class="container">
+      <div class="row">
+          <div class="col-md">
+              <div class="card">
+                  <h5 class="card-title">freya en situacion de calle / freya 6 meses despues de haber ingresado a una fundacion </h5>
+                  <img src="{% static 'img/Before-and-After-Rescues-Featured.jpg' %}" class="card-img-top" width="200" height="500">
+              </div>
+          </div><!--cierre col-->
+        </div><!--fin row-->
+        <br>
+    </div>
+
+    
+    <div class="container">
+          <div class="row">
+              <div class="col-md">
+                  <div class="card">
+                      <h5 class="card-title">maxi en situación de calle maxi a la izquierda /a la derecha maxi 2 meses despues de haber ingresado nuestra fundación fundacion</h5>
+                      <img src="{% static 'img/N5UA6F2CJFCN5CUXUMFKU3SBEM.avif' %}" class="card-img-top" width="200" height="500">
+                  </div>
+              </div><!--cierre col-->
+        </div><!--fin row-->
+        <br>
+     </div>
+
+
+    <div class="container">
+            <div class="row">
+                  <div class="col-md">
+                      <div class="card">
+                            <h5 class="card-title">spike en situacion de calle a la izquierda / a la derecha spike 1 año despues de haber ingresado a nuestra fundacion</h5>
+                            <img src="{% static 'img/Perrito-1.webp' %}" class="card-img-top">
+                        </div>
+                </div><!--cierre col-->
+            </div><!--fin row-->
+        <br>
+    </div>
+
+
+    <div class="container">
+                  <div class="row">
+                      <div class="col-md">
+                          <div class="card">
+                              <h5 class="card-title">lyon en situacion de calle a la izquierda / a la derecha lyon 3 meses despues de haber ingresado a nuestra fundacion</h5>
+                              <img src="{% static 'img/Fotos-antes-y-despues-de-perros-al-ser-rescatados-21.webp' %}" class="card-img-top" width="200" height="500">
+                          </div>
+                      </div><!--cierre col-->
+                </div><!--col-->
+    </div><!--fin row-->
+
+    <div class="container">
+                    <h3>Para contactarnos o donar </h3>
+                    <h5>Ingrese sus datos</h5>
+                    <form action="#" method="post" name="datos">
+                        <div class="form-group">
+                            <label for="rut">Rut: </label>
+                            <input type="text" id="rut" name="rut" placeholder="Digite su rut.."
+                             required class="form-control" minlength="10" rows="7" onmousemove="colorBlack(this)" 
+                             onmouseout="colorBlanco(this)">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="nom">Nombre: </label>
+                            <input type="text" id="nom" name="nom" placeholder="Digite su nombre.."
+                                class="form-control"
+                                required minlength="3" maxlength="20" onchange="upperText(this)">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="apeP">Apellido Paterno: </label>
+                            <input type="text" id="apeP" name="apeP" placeholder="Digite su apellido paterno.."
+                              class="form-control" required minlength="3" maxlength="20" onchange="upperText(this)">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="apeM">Apellido Materno: </label>
+                            <input type="text" id="apeM" name="apeM" placeholder="Digite su apellido materno.."
+                             class="form-control" required minlength="3" maxlength="20" onchange="upperText(this)">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="fecha">Fecha de nacimiento: </label>
+                            <input type="date" id="fecha" name="fecha" placeholder="Seleccione fecha de nacimiento.."
+                              class="form-control" >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="edad">Edad: </label>
+                            <input type="number" id="edad" name="edad" placeholder="Digite su edad.."
+                             required class="form-control" min="14" max="110">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="genero">Género</label>
+                            <select id="genero" class="form-control">
+                                <option value="0">Seleccione género..</option>
+                                <option value="1">Mujer</option>
+                                <option value="2">Hombre</option>
+                                <option value="3">Otro género</option
+                                    placeholder="seleccione" required>
+                            </select>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="direccion">Direccion</label>
+                            <select id="direccion" class="form-control">
+                                <option value="0">Seleccione dirección..</option>
+                                <option value="Maipu">Maipu</option>
+                                <option value="Pudahuel">Pudahuel</option>
+                                <option value="Otra comuna">Otra comuna</option>
+                            </select>
+                        </div>
+            
+                        <div class="form-group">
+                            <textarea id="carta" class="form-control" rows="7" onmousemove="colorOrange(this)" 
+                                    onmouseout="colorBlanco(this)">
+            
+                            </textarea>
+                        </div>
+            
+                        <input type="button" value="Crear ingreso" onclick="CrearIngreso()" class="btn btn-success" required>
+                        <input type="reset" value="Otro Ingreso" class="btn btn-warning"> 
+                    </form>
+                    <div id="error">
+            
+                </div>  
+    </div>   
+</body>
+<footer>
+    <div class="container">
+      <p>© 2023 Mi Sitio Web. Todos los derechos reservados. @copyright Derechos reservados</p>
+    </div>
+  </footer>
+</html>

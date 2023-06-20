@@ -1,0 +1,88 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href=" {% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fotos.css' %}">
+    <title>Misión y Visión</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                data-target="#opciones">
+              <span class="navbar-toggler-icon"></span>
+            </button>   
+    
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'img/ala.png' %}" width="45px" height="45px">
+            </a>
+    
+            <div class="collapse navbar-collapse" id="opciones"> 
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'inicio' %}">Ayu-Dog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'porqueayudar' %}">¿Por qué ayudar?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'sobreperros' %}">Sobre perros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Iniciar sesion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'crear' %}">Crear</a>
+                    </li>
+                </ul>
+            </div>
+        </nav><!-- cierre de menú -->
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <div class="card">
+                    <img src="{%static 'img/Mision.png' %}" class="card-img-top" width="200" height="500">
+                    <div class="card-body">
+                        <h3 class="card-title">Misión</h3>
+                        <p>Nuestra misión principal es ayudar a la mayoría de las fundaciones que ayuden a los perros y al grupo de amigas, enviándoles donaciones o haciendo convenios con ellas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-md">
+                <div class="card">
+                    <img src="{% static 'img/Visión-Integral-Shipping-02.jpg' %}" class="card-img-top" width="200" height="500">
+                    <div class="card-body">
+                        <h3 class="card-title">Visión</h3>
+                        <p>Nuestra visión para nuestro proyecto es poder llevarlo a cabo y realmente poder ayudar a este grupo de amigas, así como ayudar a todas las fundaciones posibles.</p>
+                    </div>
+                </div>
+            </div><!-- cierre col -->
+        </div>
+    </div>
+    <br><br>
+
+    <div class="container">
+        <p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/W2E9DBeOhVU?start=211" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+<footer>
+    <div class="container">
+      <p>© 2023 Mi Sitio Web. Todos los derechos reservados. @copyright Derechos reservados</p>
+    </div>
+  </footer>
+</html>

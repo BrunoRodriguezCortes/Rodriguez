@@ -1,0 +1,22 @@
+.contenedor{
+    display:flex;
+    justify-content: left;
+}
+
+
+.imagen-1 {
+    width:480px;
+    height:360px;
+    margin-left:0px;
+}
+
+.imagen-2 {
+    width:480px;
+    height:360px;
+    margin-left: 40px;
+
+}
+
+body{
+    background-color: beige;
+}

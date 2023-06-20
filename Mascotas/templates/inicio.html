@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/ala.png' %}" />
+    <title> Yo ayu-Dog</title>
+    <link rel="stylesheet" href="{% static 'css/fotos.css' %}">
+</head>
+<body>
+    <header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" 
+            data-target="#opciones">
+          <span class="navbar-toggler-icon"></span>
+        </button>   
+
+        <a class="navbar-brand" href="#">
+            <img src="{% static 'img/ala.png' %}" width="45px" height="45x">
+        </a>
+
+        <div class="collapse navbar-collapse" id="opciones"> 
+            {% if user.is_authenticated %}
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                </li>
+                    <a class="nav-link" href="{% url 'misionvision' %}" >Misión/Visión
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'porqueayudar' %}">¿Por que ayudar?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'sobreperros' %}">Sobre perros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'registrar' %}">Registrarse</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'crear' %}">Crear</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" href="#"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Bienvenid@ {{user.username}}</a>
+                </li>
+            </ul>
+            {% endif%}
+        </div>
+    </nav><!--cierre de menú-->
+    </header>
+
+
+
+
+
+    <div class="container-fluid">
+        <div id="carousel1" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel1" data-slide-to="1"></li>
+                <li data-target="#carousel1" data-slide-to="2"></li>
+            </ol>
+            <!--configuramos nuestras fotos-->
+            <div class="carousel-inner" >
+                <div class="carousel-item active">
+                    <div>
+                        <img class="d-block w-100"  src="{% static 'img/Proyecto nuevo 1.png' %}">
+                    </div>
+                    <div class="carousel-caption" >
+                        <h3 ></h3>
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="alinear_foto">
+                        <img class="d-block w-100" src="{% static 'img/pelotakong.png' %}">
+                    </div>
+                    <div class="carousel-caption">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="{% static 'img/foto 3.png' %}">
+                    <div class="carousel-caption">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+
+            </div><!--carrusel inner-->
+            <a class="carousel-control-prev" href="#carousel1" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel1" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">next</span>
+            </a>
+
+        </div>
+
+<br>
+<br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <div class="card">
+                        <img src="{% static 'img/01.jpg' %}" class="card-img-top" width="200" height="500">
+                        <div class="card-body">
+                            <h3 class="card-title">Hueso blando juguete</h3>
+                            <p> Este juguete le encantara a tu perro, es completamente blando y comodo, para un cachorro esta excelente ya que con este se podra rascar las encias y no destrozara nada mas
+                            </p>
+
+                               <li> Para los cachorros que le estan creciendo los dientes </li>
+                               <li> Perros que necesiten desestresarse</li>
+                               <li>Perros que hacen deporte</li>
+                               </p>
+                        </div>
+                    </div>
+                </div><!--cierre col-->
+        </div>
+<br>
+<br>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+            <div class="card">
+                <img src="{% static 'img/dispensador_Petsafe.jpg' %}" class="card-img-top" width="200" height="500">
+                <div class="card-body">
+                    <h3 class="card-title">Auto dispensador de comida</h3>
+                    <p> Con este auto dispensador no necesitaras estar en la casa para que tu perro pueda comer bien, asi estaras tranquilo y sin preocupaciones
+                    </p>
+
+                       <li> Para que se alimenten sin estar en la casa </li>
+                       <li> Podras estar fuera de casa sin preocuparte de que tu perro no comera</li>
+                       </p>
+                </div>
+            </div>
+        </div><!--cierre col-->
+</div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+        
+</body>
+<footer>
+    <div class="container">
+      <p>© 2023 Mi Sitio Web. Todos los derechos reservados. @copyright Derechos reservados</p>
+    </div>
+  </footer>
+</html>
